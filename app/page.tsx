@@ -3,8 +3,12 @@ const LINKS = {
   peaceRadioIos: "https://apps.apple.com/us/app/peace-radio-app/id1041963250?ls=1",
   zameelAndroid: "https://play.google.com/store/apps/details?id=com.wisdom.zameel&hl=en_IN",
   zameelIos: "https://apps.apple.com/in/app/zameel/id1505352802",
-  whatsapp: "https://whatsapp.com/channel/0029Va9xkVmBA1euwvVulx0O",
-  feedback: "FORM_URL_HERE"
+  feedback: "https://docs.google.com/forms/d/e/1FAIpQLSf1G9VHzPVWB6xRuooEALAk09PH-aIUGoARsDU-AsJLCsC8jg/viewform?usp=header",
+  kannurGirlsWhatsapp: "https://whatsapp.com/channel/0029Vb7YDuXDjiOXzzuqDV0D",
+  stateGirlsInstagram: "https://www.instagram.com/wisdomgirlskerala?igsi=MTZsbzM0ZmVxZjM4eA==",
+  stateGirlsWhatsapp: "https://whatsapp.com/channel/0029Va976FW9cDDbXqgw6U3h",
+  profcon: "https://www.profcon.in",
+  wisdomGlobalTv: "https://youtube.com/@wisdomglobaltv?si=w8Z5LWF7my5O9D_l"
 };
 
 function ArrowIcon() {
@@ -95,26 +99,27 @@ export default function Home() {
         <div className="hero-inner">
           <img src="/girls-logo.png" alt="Wisdom Girls" className="girls-logo" />
 
-          <div className="eyebrow">WISDOM GIRLS</div>
-          <h1>
-            കണ്ണൂർ ജില്ലാ
+          {/* <div className="eyebrow">WISDOM GIRLS</div> */}
+          <h1 className="text-3xl">
+            <span className="text-lg !text-white">കണ്ണൂർ ജില്ലാ</span>
             <br />
             <span>വിദ്യാർത്ഥിനി സമ്മേളനം</span>
           </h1>
 
-          <div className="event-meta">
+          {/* <div className="event-meta px-4 py-3"> */}
+          <div className="px-4 py-3 flex flex-col md:flex-row gap-3 max-w-lg mx-auto justify-center bg-white/35 rounded-lg backdrop-blur-2xl">
             <div className="meta-item">
-              <span className="meta-icon">27</span>
+              {/* <span className="meta-icon">27</span> */}
               <div>
-                <small>തീയതി</small>
+                {/* <small>തീയതി</small> */}
                 <strong>2026 ആഗസ്റ്റ് 27</strong>
               </div>
             </div>
             <div className="meta-divider" />
             <div className="meta-item">
-              <span className="meta-icon pin">⌖</span>
+              {/* <span className="meta-icon pin">⌖</span> */}
               <div>
-                <small>വേദി</small>
+                {/* <small>വേദി</small> */}
                 <strong>മുണ്ടയാട് ഇൻഡോർ സ്റ്റേഡിയം, കണ്ണൂർ</strong>
               </div>
             </div>
@@ -123,13 +128,30 @@ export default function Home() {
       </section>
 
       <section className="content">
-        <div className="section-heading">
+        {/* <div className="section-heading">
           <span className="section-kicker">USEFUL RESOURCES</span>
           <h2>സമ്മേളനത്തിനൊപ്പം ആവശ്യമായവ</h2>
           <p>ആവശ്യമായ ആപ്പുകളും അപ്ഡേറ്റുകളും താഴെ നിന്ന് എളുപ്പത്തിൽ ലഭ്യമാക്കാം.</p>
-        </div>
+        </div> */}
 
         <div className="resources">
+          <article className="feedback-card">
+            {/* <div className="feedback-mark">✦</div> */}
+            <div className="feedback-copy">
+              <span className="section-kicker">YOUR VOICE MATTERS</span>
+              <h2>സമ്മേളനത്തെക്കുറിച്ചുള്ള അഭിപ്രായം പങ്കുവെക്കൂ</h2>
+              <p>നിങ്ങളുടെ വിലയേറിയ അഭിപ്രായങ്ങളും നിർദേശങ്ങളും ഞങ്ങളുമായി പങ്കുവെക്കുക.</p>
+            </div>
+            <a
+              className="feedback-button"
+              href={LINKS.feedback}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Feedback Form
+              <ArrowIcon />
+            </a>
+          </article>
           <AppCard
             logo="/peace-radio.png"
             name="Peace Radio"
@@ -152,33 +174,73 @@ export default function Home() {
             <div className="resource-head">
               <div className="simple-icon whatsapp-icon">◉</div>
               <div>
-                <h2>Wisdom Kannur WhatsApp Channel</h2>
-                <p>സമ്മേളനവുമായി ബന്ധപ്പെട്ട പുതിയ അറിയിപ്പുകളും അപ്ഡേറ്റുകളും ലഭിക്കാൻ ചാനൽ പിന്തുടരുക.</p>
+                <h2>Girls Kannur WhatsApp Channel</h2>
+                <p>കണ്ണൂർ ജില്ലാ വിദ്യാർത്ഥിനി വിഭാഗത്തിന്റെ പുതിയ അറിയിപ്പുകളും അപ്ഡേറ്റുകളും ലഭിക്കാൻ ചാനൽ പിന്തുടരുക.</p>
               </div>
             </div>
-            <a className="primary-button" href={LINKS.whatsapp} target="_blank" rel="noreferrer">
+            <a className="primary-button" href={LINKS.kannurGirlsWhatsapp} target="_blank" rel="noreferrer">
               <span>WhatsApp Channel തുറക്കുക</span>
               <ExternalIcon />
             </a>
           </article>
 
-          <article className="feedback-card">
-            <div className="feedback-mark">✦</div>
-            <div className="feedback-copy">
-              <span className="section-kicker">YOUR VOICE MATTERS</span>
-              <h2>സമ്മേളനത്തെക്കുറിച്ചുള്ള അഭിപ്രായം പങ്കുവെക്കൂ</h2>
-              <p>നിങ്ങളുടെ വിലയേറിയ അഭിപ്രായങ്ങളും നിർദേശങ്ങളും ഞങ്ങളുമായി പങ്കുവെക്കുക.</p>
+          <div className="single-card">
+            <div className="resource-head">
+              <div className="simple-icon">◎</div>
+              <div>
+                <h2>State Girls Instagram</h2>
+                <p>Wisdom Girls Keralaയുടെ ഔദ്യോഗിക Instagram പേജ് പിന്തുടരുക.</p>
+              </div>
             </div>
-            <a
-              className="feedback-button"
-              href={LINKS.feedback}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Feedback Form
-              <ArrowIcon />
+            <a className="primary-button" href={LINKS.stateGirlsInstagram} target="_blank" rel="noreferrer">
+              <span>Instagram തുറക്കുക</span>
+              <ExternalIcon />
             </a>
-          </article>
+          </div>
+
+          <div className="single-card">
+            <div className="resource-head">
+              <div className="simple-icon whatsapp-icon">◉</div>
+              <div>
+                <h2>State Girls WhatsApp Channel</h2>
+                <p>സംസ്ഥാന തലത്തിലുള്ള Girls വിഭാഗത്തിന്റെ പുതിയ അറിയിപ്പുകൾ ലഭിക്കാൻ ചാനൽ പിന്തുടരുക.</p>
+              </div>
+            </div>
+            <a className="primary-button" href={LINKS.stateGirlsWhatsapp} target="_blank" rel="noreferrer">
+              <span>WhatsApp Channel തുറക്കുക</span>
+              <ExternalIcon />
+            </a>
+          </div>
+
+          <div className="single-card">
+            <div className="resource-head">
+              <div className="simple-icon">↗</div>
+              <div>
+                <h2>Profcon Registration</h2>
+                <p>Profcon രജിസ്ട്രേഷനും അനുബന്ധ വിവരങ്ങൾക്കും ഔദ്യോഗിക വെബ്സൈറ്റ് സന്ദർശിക്കുക.</p>
+              </div>
+            </div>
+            <a className="primary-button" href={LINKS.profcon} target="_blank" rel="noreferrer">
+              <span>Profcon തുറക്കുക</span>
+              <ExternalIcon />
+            </a>
+          </div>
+
+          <div className="single-card">
+            <div className="resource-head">
+              <div className="simple-icon">▶</div>
+              <div>
+                <h2>Wisdom Global TV</h2>
+                <p>Wisdom Global TV YouTube ചാനലിലെ പുതിയ വീഡിയോകൾ കാണാം.</p>
+              </div>
+            </div>
+            <a className="primary-button" href={LINKS.wisdomGlobalTv} target="_blank" rel="noreferrer">
+              <span>YouTube തുറക്കുക</span>
+              <ExternalIcon />
+            </a>
+          </div>
+
+          
         </div>
       </section>
 

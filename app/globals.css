@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Manjari:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap');
 
+@import "tailwindcss";
+
+
 :root {
   --bg: #071016;
   --panel: rgba(255,255,255,.055);
@@ -51,7 +54,7 @@ main { min-height: 100vh; overflow: hidden; position: relative; }
   width: 94px;
   height: 94px;
   object-fit: contain;
-  margin: 0 auto 24px;
+  margin: 0 auto 14px;
   filter: drop-shadow(0 12px 35px rgba(213,26,131,.22));
 }
 
@@ -63,9 +66,9 @@ main { min-height: 100vh; overflow: hidden; position: relative; }
 }
 
 .hero h1 {
-  margin: 12px 0 25px;
+  margin: 12px 0 15px;
   font-family: Manjari, sans-serif;
-  font-size: clamp(32px, 7vw, 68px);
+  /* font-size: clamp(32px, 7vw, 68px); */
   line-height: 1.25;
   letter-spacing: -.025em;
 }
@@ -83,7 +86,7 @@ main { min-height: 100vh; overflow: hidden; position: relative; }
   justify-content: center;
   gap: 22px;
   max-width: 100%;
-  padding: 13px 18px;
+  /* padding: 8px 10px; */
   border: 1px solid var(--line);
   background: rgba(255,255,255,.045);
   backdrop-filter: blur(16px);
